@@ -9,7 +9,7 @@ class AlarmClock {
             throw new Error('Отсутствуют обязательные аргументы');
         }
 
-        let checkAlarmTime = this.alarmCollection.filter(item => item === time);
+        let checkAlarmTime = this.alarmCollection.filter(item => item.time === time);
         if (checkAlarmTime.length > 0) {
             console.warn('Уже присутствует звонок на это же время');
         }
@@ -35,7 +35,7 @@ class AlarmClock {
 
         this.intervalId = setInterval(() => {
             this.alarmCollection.forEach(element => {
-                if (element.time === this.getCurrentFormattedTime()) {
+                if (element.time === this.getCurrentFormattedTime() && element.canCall) {
                     element.canCall = false;
                     element.callback();
                 }
