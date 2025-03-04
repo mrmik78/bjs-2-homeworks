@@ -43,19 +43,19 @@ function differenceMaxMinWorker(...arr) {
   return max - min;
 }
 
-function differenceEvenOddWorker(...arr) {
-  if (!arr.length) {
-    for (let i = 0; i < arr.length; i++) {
-      if (arr[i] > max) {
-        max = arr[i];
-      }
-      if (arr[i] < min) {
-        min = arr[i];
-      }
-    }
-    return max - min;
-  }
-}
+// function differenceEvenOddWorker(...arr) {
+//   if (!arr.length) {
+//     for (let i = 0; i < arr.length; i++) {
+//       if (arr[i] > max) {
+//         max = arr[i];
+//       }
+//       if (arr[i] < min) {
+//         min = arr[i];
+//       }
+//     }
+//     return max - min;
+//   }
+// }
 
 function differenceEvenOddWorker(...arr) {
   if (![...arr].length) {
