@@ -87,7 +87,6 @@ for (let i = 0; i < arr.length; i+=1){
   
    return sumEvenElement / countEvenElement;
   }
-}
 
 function makeWork(arrOfArr, func) {
   let maxWorkerResult = -Infinity;
