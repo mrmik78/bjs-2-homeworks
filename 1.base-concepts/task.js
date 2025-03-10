@@ -19,9 +19,7 @@ function calculateTotalMortgage(percent, contribution, amount, countMonths) {
       return false;
     }
   }
-  if (percent < 0 || percent > 100) {
-    return false;
-  }
+
   percent = percent / 100 / 12;
   let loanBody = amount - contribution;
   let monthlyPayment = loanBody * (percent + (percent / (((1 + percent) ** countMonths) - 1)));
