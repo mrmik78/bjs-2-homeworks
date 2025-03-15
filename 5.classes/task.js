@@ -4,7 +4,7 @@ class PrintEditionItem {
         this.name = name;
         this.releaseDate = releaseDate;
         this.pagesCount = pagesCount;
-        this.state = 100;
+        this._state = 100;
         this.type = null;
     }
     fix() {
